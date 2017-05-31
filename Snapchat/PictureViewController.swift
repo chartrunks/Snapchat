@@ -26,6 +26,9 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
 
         // Do any additional setup after loading the view.
         imagePicker.delegate = self
+        
+        //Makes so they can't click before they select an image
+        nextButton.isEnabled = false
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -35,12 +38,15 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         imageView.backgroundColor = UIColor.clear
         
+        //Enables next button again once they select an image
+        nextButton.isEnabled = true
+        
         imagePicker.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cameraTapped(_ sender: Any) {
         
-        imagePicker.sourceType = .savedPhotosAlbum
+        imagePicker.sourceType = .camera
         imagePicker.allowsEditing = false
         
         present(imagePicker, animated: true, completion: nil)
