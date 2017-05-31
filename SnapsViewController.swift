@@ -22,18 +22,33 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.delegate = self
         self.tableView.dataSource = self
 
-        //Goes through all users
+        //Goes through all snaps when snap is added
         Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).child("snaps").observe(DataEventType.childAdded, with: { (snapshot) in
             
             let snap = Snap()
             snap.imageURL = (snapshot.value as! NSDictionary)["imageURL"] as! String
             snap.from = (snapshot.value as! NSDictionary)["from"] as! String
             snap.descrip = (snapshot.value as! NSDictionary)["description"] as! String
+            snap.key = snapshot.key
+            snap.uuid = (snapshot.value as! NSDictionary)["uuid"] as! String
             
             self.snaps.append(snap)
             
             self.tableView.reloadData()
             })
+        
+        //Goes through all snaps when snap is removed
+        Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).child("snaps").observe(DataEventType.childRemoved, with: { (snapshot) in
+            
+            var index = 0
+            for snap in self.snaps {
+                if snap.key == snapshot.key {
+                    self.snaps.remove(at: index)
+                }
+                index += 1
+            }
+            self.tableView.reloadData()
+        })
     }
 
     @IBAction func logOutTapped(_ sender: Any) {

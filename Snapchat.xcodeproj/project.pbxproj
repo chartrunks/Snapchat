@@ -37,7 +37,7 @@
 		0479919F1EDD3C0C00F348D4 /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapsViewController.swift; path = ../SnapsViewController.swift; sourceTree = "<group>"; };
 		04FB2D311EDE231900B886A1 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
 		04FB2D331EDE28C600B886A1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		04FB2D361EDE55EC00B886A1 /* Snap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
+		04FB2D361EDE55EC00B886A1 /* Snap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Snap.swift; path = ../Snap.swift; sourceTree = "<group>"; };
 		04FB2D381EDE60CA00B886A1 /* ViewSnapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSnapViewController.swift; sourceTree = "<group>"; };
 		41651AC6257FDCD54C9CFBA3 /* Pods_Snapchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		912657D4560CA408F1E5037C /* Pods-Snapchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Snapchat/Pods-Snapchat.release.xcconfig"; sourceTree = "<group>"; };
@@ -60,7 +60,6 @@
 		043D8BC91EDCEC8E0008A872 = {
 			isa = PBXGroup;
 			children = (
-				04FB2D361EDE55EC00B886A1 /* Snap.swift */,
 				043D8BD41EDCEC8E0008A872 /* Snapchat */,
 				043D8BD31EDCEC8E0008A872 /* Products */,
 				684E52286D41A83557262D54 /* Pods */,
@@ -82,6 +81,7 @@
 				04FB2D351EDE28F500B886A1 /* View Controllers */,
 				043D8BD51EDCEC8E0008A872 /* AppDelegate.swift */,
 				04FB2D331EDE28C600B886A1 /* User.swift */,
+				04FB2D361EDE55EC00B886A1 /* Snap.swift */,
 				043D8BD91EDCEC8E0008A872 /* Main.storyboard */,
 				043D8BDC1EDCEC8E0008A872 /* Assets.xcassets */,
 				043D8BDE1EDCEC8E0008A872 /* LaunchScreen.storyboard */,
